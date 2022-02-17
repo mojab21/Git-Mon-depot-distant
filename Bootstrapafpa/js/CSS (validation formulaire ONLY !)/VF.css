@@ -1,0 +1,8 @@
+#nomWriteError, #prenomWriteError, #adresseWriteError, #cpWriteError, #villeWriteError, #emailWriteError, #ddnWriteError, #sexeWriteError, #ddnWriteError{
+
+    color: red;
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-top: 0px;
+    margin-bottom: 24px;
+}

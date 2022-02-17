@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/js/CSS (validation formulaire ONLY !)/VF.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>JARDITOU</title>
+</head>
+<!--**********************************************************
+*************************HEAD FINISHED************************
+**************************************************************-->
+<header>
+    <img src="/img/jarditou_logo.jpg" width="300" height="100" alt="Jardi">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Jarditou.com</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0" >
+                <li>
+        <a href="/index.html" class="text-dark">Accueil</a><a href="/tableau.html" class="text-dark">Tableau</a><a href="/contact.html" class="text-dark">Contact</a>
+                </li>
+                </ul>
+      <form class="form-inline my-2 my-lg-0"> 
+        <input class="form-control mr-sm-2" type="search" placeholder="Votre promotion" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-lg-0" type="submit">Rechercher</button>
+        </div>
+      </form>
+
+    </nav>
+        <img src="/img/promotion.jpg" alt="Promo" width="100%">
+</header>
+<!--**********************************************************
+*************************HEADER FINISHED**********************
+**************************************************************-->
+<body>
+  <!--**********************************************************
+***********************PERSONAL INFO STARTED********************
+**************************************************************-->  
+            <form action="" method="get" id="myForm">
+            <div class="col-sm-12">
+            <!---------NOM-------->
+            <label for="nom">Nom*</label>
+            <input type="text" class="form-control" name="nom" placeholder="Veuillez saisair votre nom" id="nom">
+            <span id="nomWriteError"></span>
+            <span id="nomOK"></span>
+            </div>
+            <!---------END NOM-------->
+            <div class="col-sm-12">
+            <!---------PRENOM-------->
+            <label for="prenom">Prénom*</label>
+            <input type="text" class="form-control" name="prenom" placeholder="Veuillez saisir votre prénom" id="prenom"> 
+            <span id="prenomWriteError"></span>
+            </div>
+            <!---------END PRENOM-------->
+            <div class="col-sm-12">
+            <!---------SEXE-------->
+            <label>Sexe*:</label><br>
+            <input type="radio" name="sexe" value="Féminin" id="female"> Féminin
+            <input type="radio" name="sexe" value="Masculin" id="male"> Masculin
+            <br><span id="sexeWriteError"><span id="sexeOK"></span></span><br>
+            </div>
+            <!---------SEXE ENDED-------->
+            <div class="col-sm-12">
+            <!---------DATE DE NAISSANCE-------->
+            <label for="ddn">Date de Naissance*</label>
+            <input type="date" class="form-control" name="ddn" id="ddn"> 
+            <span id="ddnWriteError"></span>
+            </div>
+            <!---------END DATE DE NAISSANCE-------->
+            <div class="col-sm-12">
+            <!---------CODE POSTAL-------->
+            <label for="codepostal">Code Postal*</label>
+            <input type="text" class="form-control" name="codepostal" id="cp"> 
+            <span id="cpWriteError"></span>
+            </div>
+            <!---------END CODE POSTAL-------->
+            <div class="col-sm-12">
+            <!---------ADRESSE-------->
+            <label for="adresse">Adresse</label>
+            <input type="text" class="form-control" name="adresse" id="adresse">
+            <span id="adresseWriteError"></span>
+            </div>
+            <!---------END ADRESSE-------->
+            <div class="col-sm-12">
+            <!---------VILLE-------->
+            <label for="ville">Ville</label>
+            <input type="text" class="form-control" name="ville" id="ville"> 
+            <span id="villeWriteError"></span>
+            </div>
+            <!---------END VILLE-------->
+            <div class="col-sm-12">
+            <!---------EMAIL-------->
+            <label for="email">Email*</label>
+            <input type="text" class="form-control" name="email" id="email">
+            <span id="emailWriteError"></span>
+            </div>
+            <!---------END EMAIL-------->
+            <div class="col-sm-12">
+            <label for="Sujet">Sujet* : </label>
+            <input type="text" id="Sujet" list="Sujet*" placeholder="Veuillez séléctionner un sujet">
+            <datalist id="Sujet*">
+            <option value="Mes commandes">
+            <option value="Question sur un produit">
+            <option value="Réclamation">
+            <option value="Autres">
+            </datalist> <br>
+            <label for="question">Votre question*</label>
+            <textarea name="commentaire" rows="2" cols="20" class="form-control" id="question"></textarea>
+ <br>
+            <input type="checkbox" name="*Sexe" value="*J'accepte le traitement informatique de ce formulaire">*J'accepte le traitement informatique de ce formulaire <br>
+            <br><Button type="submit" class="btn btn-primary" id="envoi" onclick="submitRadioButton()">Envoyer</Button> 
+            <Button type="reset" class="btn btn-primary">Annuler</Button> 
+<hr>
+</form>
+            </div>
+
+  <!--**********************************************************
+***********************PERSONAL INFO FINISHED*******************
+**************************************************************-->  
+
+<footer>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+         <a class="navbar-brand" href="#"></a>
+         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+         <a href="#" class= text-secondary >Mention légales</a> <a href="#" class= text-secondary>Horaires</a> <a href="#"class= text-secondary>Plan du site</a>
+         </ul>
+         </div>
+    </nav>
+  
+</footer>
+<!--**********************************************************
+*************************FOOTER FINISHED**********************
+**************************************************************-->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="/js/script.js"></script>
+</body>
+<!--**********************************************************
+*************************BODY FINISHED************************
+**************************************************************-->
+</html>
